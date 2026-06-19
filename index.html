@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── Primary SEO ─────────────────────────────────────── -->
+<title>Factory DPP Readiness Check | Free AI-Powered EU Compliance Assessment</title>
+<meta name="description" content="Free AI-powered EU Digital Product Passport (DPP) readiness assessment for garment and textile factories worldwide. Get personalized lean manufacturing recommendations instantly. Any factory size, any country.">
+<meta name="keywords" content="EU Digital Product Passport, DPP readiness, lean manufacturing assessment, factory DPP compliance, textile DPP, garment factory EU compliance, DPP 2025, lean DPP framework">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Factory DPP Check">
+<link rel="canonical" href="https://your-site.netlify.app">
+
+<!-- ── Open Graph ──────────────────────────────────────── -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Factory DPP Readiness Check — Free AI Assessment">
+<meta property="og:description" content="Is your factory ready for EU Digital Product Passport compliance? Free personalized AI assessment for any factory, anywhere in the world.">
+<meta property="og:site_name" content="Factory DPP Check">
+
+<!-- ── Twitter Card ───────────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Factory DPP Readiness Check">
+<meta name="twitter:description" content="Free AI-powered EU DPP compliance assessment for factories worldwide.">
+
+<!-- ── Schema.org ─────────────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Factory DPP Readiness Check",
+  "description": "Free AI-powered EU Digital Product Passport readiness and Lean manufacturing assessment for factories worldwide",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "keywords": "EU Digital Product Passport, DPP, lean manufacturing, factory compliance, textile sustainability"
+}
+</script>
+
+<!-- ── Google Fonts ────────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ── CSS Variables ──────────────────────────── */
+:root {
+  --bg:      #060E1C;
+  --surface: #0A1628;
+  --border:  #111827;
+  --border2: #1F2937;
+  --primary: #00C896;
+  --primary-dark: #00A87A;
+  --indigo:  #818CF8;
+  --warn:    #F59E0B;
+  --danger:  #EF4444;
+  --text:    #EEF2FF;
+  --muted:   #6B7280;
+  --faint:   #374151;
+  --radius:  8px;
+  --radius-lg: 12px;
+}
+
+/* ── Reset + Base ───────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+button { font-family: inherit; cursor: pointer; border: none; }
+
+/* ── Shared Utilities ───────────────────────── */
+.badge { display: inline-flex; align-items: center; gap: .4rem; padding: .28rem .9rem; border-radius: 999px; background: rgba(0,200,150,.1); border: 1px solid rgba(0,200,150,.3); color: var(--primary); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.btn-primary { display: inline-flex; align-items: center; gap: .45rem; padding: .88rem 2.1rem; background: var(--primary); color: #fff; border-radius: var(--radius); font-size: .97rem; font-weight: 700; transition: background .2s, transform .15s; }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.btn-primary:disabled { opacity: .35; pointer-events: none; }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: .55rem 1.1rem; border-radius: var(--radius); font-size: .83rem; transition: border-color .15s, color .15s; }
+.btn-outline:hover { border-color: var(--border2); color: var(--text); }
+.label { display: block; font-size: .7rem; font-weight: 700; color: var(--faint); margin-bottom: .45rem; text-transform: uppercase; letter-spacing: .08em; }
+.input, .select, .textarea {
+  width: 100%; padding: .7rem .95rem; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text); font-size: .9rem; font-family: inherit;
+  outline: none; transition: border-color .2s;
+}
+.input:focus, .select:focus, .textarea:focus { border-color: var(--primary); }
+.select { cursor: pointer; -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right .85rem center; padding-right: 2.2rem; }
+.select option { background: var(--surface); }
+.textarea { min-height: 95px; resize: vertical; line-height: 1.6; }
+.field { margin-bottom: 1.3rem; }
+.pills { display: flex; flex-wrap: wrap; gap: .4rem; }
+.pill { padding: .32rem .75rem; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: .78rem; transition: .15s; }
+.pill.on { background: rgba(0,200,150,.1); border-color: var(--primary); color: var(--primary); }
+.grad-text { background: linear-gradient(135deg, var(--primary) 30%, var(--indigo)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* ── Hero ───────────────────────────────────── */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 2rem; text-align: center; position: relative; overflow: hidden;
+  background-image: linear-gradient(rgba(0,200,150,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,200,150,.045) 1px, transparent 1px);
+  background-size: 50px 50px; animation: gridmove 30s linear infinite;
+}
+@keyframes gridmove { from { background-position: 0 0,0 0; } to { background-position: 50px 50px,50px 50px; } }
+.hero-glow-top { position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 500px; background: radial-gradient(ellipse, rgba(0,200,150,.11) 0%, transparent 65%); pointer-events: none; }
+.hero-glow-bot { position: absolute; bottom: -120px; right: -100px; width: 450px; height: 450px; background: radial-gradient(ellipse, rgba(129,140,248,.07) 0%, transparent 65%); pointer-events: none; }
+.hero h1 { font-size: clamp(1.9rem, 5vw, 3.4rem); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; max-width: 760px; margin: 0 auto 1.2rem; }
+.hero-sub { font-size: .97rem; color: var(--muted); max-width: 530px; margin: 0 auto 2.2rem; line-height: 1.7; }
+.hero-hint { color: var(--faint); font-size: .76rem; margin-top: .6rem; }
+.hero-stats { display: flex; gap: 2.2rem; margin-top: 3.2rem; flex-wrap: wrap; justify-content: center; }
+.stat-n { font-size: 1.15rem; font-weight: 700; color: var(--primary); }
+.stat-l { font-size: .7rem; color: var(--faint); margin-top: .1rem; }
+.ticker-wrap { overflow: hidden; width: 100%; margin-top: 2rem; -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent); mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent); }
+.ticker { display: inline-block; white-space: nowrap; animation: tickmove 22s linear infinite; font-size: .75rem; color: var(--faint); }
+@keyframes tickmove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── Form Page ──────────────────────────────── */
+.form-page { max-width: 600px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.form-topbar { display: flex; align-items: center; gap: .85rem; margin-bottom: 2rem; }
+.prog-track { flex: 1; height: 3px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.prog-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--indigo)); border-radius: 99px; transition: width .4s ease; }
+.step-counter { font-size: .75rem; color: var(--faint); white-space: nowrap; }
+.step-h { font-size: 1.45rem; font-weight: 700; margin-bottom: .35rem; }
+.step-sub { color: var(--muted); font-size: .9rem; margin-bottom: 1.7rem; }
+
+/* Role cards */
+.role-cards { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+.role-card { padding: .85rem 1rem; background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); cursor: pointer; transition: .15s; text-align: left; }
+.role-card:hover { border-color: var(--border2); }
+.role-card.sel { border-color: var(--primary); background: rgba(0,200,150,.06); }
+.role-icon { font-size: 1.3rem; margin-bottom: .3rem; }
+.role-title { font-size: .88rem; font-weight: 600; }
+.role-desc { font-size: .72rem; color: var(--muted); margin-top: .15rem; line-height: 1.3; }
+
+/* Lean practice checkboxes */
+.lean-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .6rem; }
+.lean-score-num { font-size: .95rem; font-weight: 700; }
+.lean-score-lbl { font-size: .65rem; color: var(--faint); text-align: right; margin-top: .1rem; }
+.lean-bar-track { height: 5px; background: var(--border); border-radius: 99px; margin-bottom: 1.2rem; overflow: hidden; }
+.lean-bar-fill { height: 100%; border-radius: 99px; transition: width .3s ease, background .3s ease; }
+.checks { display: grid; gap: .45rem; }
+.chi { display: flex; align-items: center; gap: .7rem; padding: .65rem .9rem; background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); cursor: pointer; transition: .15s; user-select: none; }
+.chi:hover { border-color: var(--border2); }
+.chi.ck { border-color: rgba(0,200,150,.35); background: rgba(0,200,150,.04); }
+.chbox { width: 17px; height: 17px; border-radius: 4px; border: 1.5px solid var(--border2); flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: .15s; }
+.chi.ck .chbox { background: var(--primary); border-color: var(--primary); }
+.chlbl { font-size: .83rem; color: var(--muted); flex: 1; line-height: 1.35; }
+.chi.ck .chlbl { color: #D1D5DB; }
+
+/* Doc level cards */
+.doc-cards { display: grid; gap: .6rem; }
+.dcard { padding: .9rem 1rem; background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius-lg); cursor: pointer; transition: .15s; }
+.dcard:hover { border-color: var(--border2); }
+.dcard.sel { border-color: var(--primary); background: rgba(0,200,150,.05); }
+.dcard-hd { display: flex; align-items: center; gap: .55rem; margin-bottom: .2rem; }
+.dcard-title { font-size: .88rem; font-weight: 600; }
+.dcard-desc { font-size: .75rem; color: var(--muted); line-height: 1.4; }
+
+/* Summary box */
+.sum-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: .9rem 1.1rem; margin-bottom: 1.3rem; font-size: .83rem; line-height: 1.9; }
+.form-nav { display: flex; justify-content: flex-end; margin-top: 1.4rem; }
+
+/* ── Loading ────────────────────────────────── */
+.load-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg); }
+.spin-wrap { width: 80px; height: 80px; position: relative; margin: 0 auto 2rem; }
+.ring1 { position: absolute; inset: 0; border: 2.5px solid rgba(0,200,150,.12); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+.ring2 { position: absolute; inset: 14px; border: 2px solid rgba(129,140,248,.1); border-top-color: rgba(129,140,248,.5); border-radius: 50%; animation: spin 1.7s linear infinite reverse; }
+.ring3 { position: absolute; inset: 28px; background: rgba(0,200,150,.07); border-radius: 50%; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.load-msg { color: var(--primary); font-weight: 500; margin-bottom: .4rem; font-size: .93rem; }
+.load-hint { color: var(--faint); font-size: .75rem; }
+
+/* ── Results ────────────────────────────────── */
+.res-page { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.res-header { text-align: center; margin-bottom: 2.2rem; }
+.res-meta { color: var(--faint); font-size: .8rem; margin-top: .4rem; }
+.score-grid { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; margin-bottom: 1.2rem; align-items: start; }
+.score-main { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.4rem; display: flex; flex-direction: column; align-items: center; min-width: 165px; }
+.score-cats { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.2rem; }
+.score-ring-svg { width: 100px; height: 100px; margin-bottom: .65rem; }
+.score-num { font-size: 2rem; font-weight: 800; line-height: 1; }
+.score-lbl { font-size: .72rem; color: var(--muted); margin-top: .25rem; text-align: center; }
+.verif-badge { display: inline-flex; align-items: center; gap: .3rem; padding: .22rem .65rem; border-radius: 99px; font-size: .68rem; font-weight: 700; margin-top: .5rem; letter-spacing: .03em; }
+.cat-row { margin-bottom: .85rem; }
+.cat-row:last-child { margin-bottom: 0; }
+.cat-label-row { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); margin-bottom: .35rem; }
+.cat-track { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.cat-fill { height: 100%; border-radius: 99px; transition: width 1.2s .2s ease; }
+.eu-alert { margin-top: .9rem; padding: .6rem .8rem; background: rgba(245,158,11,.08); border: 1px solid rgba(245,158,11,.2); border-radius: var(--radius); font-size: .74rem; color: var(--warn); }
+.ai-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.4rem; margin-bottom: 1.1rem; line-height: 1.75; }
+.ai-sec { color: var(--primary); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin: 1.1rem 0 .35rem; padding-top: .8rem; border-top: 1px solid var(--border); }
+.ai-sec:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.ai-bullet { color: #9CA3AF; font-size: .87rem; padding-left: 1.1rem; position: relative; margin-bottom: .2rem; }
+.ai-bullet::before { content: '→'; color: var(--primary); position: absolute; left: 0; }
+.ai-text { color: #9CA3AF; font-size: .87rem; margin-bottom: .2rem; }
+.res-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .5rem; }
+
+/* ── SEO footer ─────────────────────────────── */
+.seo-footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; max-width: 720px; margin: 2rem auto 0; }
+.seo-footer h2 { font-size: 1rem; font-weight: 600; margin-bottom: .75rem; }
+.seo-footer p { font-size: .82rem; color: var(--muted); line-height: 1.7; margin-bottom: .75rem; }
+.seo-footer .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+.seo-footer .tag { padding: .2rem .6rem; border-radius: 4px; background: var(--surface); border: 1px solid var(--border); font-size: .72rem; color: var(--faint); }
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 520px) {
+  .score-grid { grid-template-columns: 1fr; }
+  .role-cards { grid-template-columns: 1fr; }
+  .score-main { flex-direction: row; gap: 1.2rem; justify-content: flex-start; min-width: unset; }
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ─────────────────────────────────────────────
+   CONSTANTS
+───────────────────────────────────────────── */
+const ROLES = [
+  { id: 'owner',   ic: '🏭', t: 'Factory Owner', d: 'Owner or director' },
+  { id: 'manager', ic: '📋', t: 'Production Manager', d: 'IE or floor manager' },
+  { id: 'auditor', ic: '🔍', t: 'Auditor / QA', d: 'Internal or third-party' },
+  { id: 'compliance', ic: '📜', t: 'Compliance Officer', d: 'Regulatory & reporting' }
+];
+const FTYPES = ['Garment / Apparel (Cut & Sew)','Textile Spinning','Weaving & Knitting','Dyeing & Finishing','Accessories Manufacturing','Denim Production','Technical Textiles','Footwear Manufacturing','Home Textiles','Other Manufacturing'];
+const FSIZES = ['1–50 workers (Micro)','51–250 workers (Small)','251–1,000 workers (Medium)','1,001–5,000 workers (Large)','5,000+ workers (Enterprise)'];
+const MARKETS = ['EU / Europe','USA','UK','Canada','Australia','Japan','South Korea','Middle East','Domestic Only'];
+const PRACTICES = [
+  'Daily defect rate tracked per sewing line',
+  'Takt time calculated & displayed on floor',
+  '5S workplace organization in place',
+  'Standard Operating Procedures documented',
+  'Energy & water usage monitored monthly',
+  'Fabric/cutting waste weighed & recorded',
+  'Line balancing sheets maintained',
+  'On-time delivery % tracked monthly',
+  'Chemical inventory list maintained',
+  'Worker training & skill records kept'
+];
+const CERTS = ['BSCI','SEDEX','SA8000','ISO 9001','ISO 14001','OEKO-TEX','GOTS','GRS','Higg Index','None'];
+const DOC_OPTS = [
+  { id: 'none',       ic: '🔴', t: 'No Records',          d: 'Self-reported only — no formal documentation' },
+  { id: 'partial',    ic: '🟡', t: 'Some Records',         d: 'Informal spreadsheets or partial logs exist' },
+  { id: 'documented', ic: '🟢', t: 'Fully Documented',     d: 'Formal internal records, SOPs and logs available' },
+  { id: 'verified',   ic: '💎', t: 'Third-Party Verified', d: 'Externally audited — BSCI, SEDEX, ISO, SA8000 etc.' }
+];
+const LOAD_MSGS = [
+  'Analyzing your factory profile…',
+  'Mapping lean maturity indicators…',
+  'Checking EU DPP compliance gaps…',
+  'Comparing with global benchmarks…',
+  'Building your personalized roadmap…'
+];
+
+/* ─────────────────────────────────────────────
+   STATE
+───────────────────────────────────────────── */
+let S = {
+  phase: 'hero',   // hero | form | loading | results | error
+  step: 1,
+  form: {
+    role: '', country: '', factoryType: '', workers: '',
+    products: '', markets: [], practices: [],
+    docLevel: '', certs: [], question: ''
+  },
+  result: '',
+  loadIdx: 0,
+  error: ''
+};
+let _loadTimer = null;
+
+/* ─────────────────────────────────────────────
+   SCORING ENGINE
+───────────────────────────────────────────── */
+function calcScores(f) {
+  const lean = Math.round((f.practices.length / 10) * 100);
+  const docMap = { none: 10, partial: 35, documented: 65, verified: 95 };
+  const data = docMap[f.docLevel] || 8;
+  const eu = f.markets.some(m => ['EU / Europe', 'UK'].includes(m));
+  const raw = lean * 0.42 + data * 0.58;
+  const overall = Math.min(100, Math.round(eu && data < 50 ? raw * 0.87 : raw));
+  const comp = Math.min(100, Math.round(data * 0.55 + lean * 0.45));
+  const col = overall >= 70 ? '#00C896' : overall >= 40 ? '#F59E0B' : '#EF4444';
+  const lbl = overall >= 70 ? 'Largely Ready' : overall >= 40 ? 'Partially Ready' : 'Not Yet Ready';
+  return { overall, lean, data, comp, col, lbl, eu };
+}
+
+/* ─────────────────────────────────────────────
+   STATE HELPERS
+───────────────────────────────────────────── */
+function u(patch)       { S = { ...S, ...patch }; render(); }
+function uf(key, val)   { S = { ...S, form: { ...S.form, [key]: val } }; render(); }
+function toggleArr(k,v) { const a = S.form[k]; S = { ...S, form: { ...S.form, [k]: a.includes(v) ? a.filter(x=>x!==v) : [...a,v] } }; render(); }
+
+function togglePractice(idx) {
+  const p = PRACTICES[idx];
+  const arr = S.form.practices;
+  const next = arr.includes(p) ? arr.filter(x => x !== p) : [...arr, p];
+  S = { ...S, form: { ...S.form, practices: next } };
+  /* ── Live DOM update (no full re-render) ── */
+  const sc = Math.round((next.length / 10) * 100);
+  const col = sc >= 70 ? '#00C896' : sc >= 40 ? '#F59E0B' : '#EF4444';
+  const sd = document.getElementById('lean-score-disp');
+  const sb = document.getElementById('lean-score-bar');
+  if (sd) { sd.textContent = sc + '%'; sd.style.color = col; }
+  if (sb) { sb.style.width = sc + '%'; sb.style.background = col; }
+  const ci = document.querySelectorAll('.chi')[idx];
+  if (ci) {
+    const on = next.includes(p);
+    ci.classList.toggle('ck', on);
+    ci.querySelector('.chbox').innerHTML = on
+      ? '<svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3L9 1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      : '';
+    ci.querySelector('.chlbl').style.color = on ? '#D1D5DB' : '#6B7280';
+  }
+}
+
+function canNext() {
+  const { step, form } = S;
+  if (step === 1) return !!form.role;
+  if (step === 2) return !!(form.factoryType && form.workers);
+  if (step === 5) return !!form.docLevel;
+  return true;
+}
+
+/* ─────────────────────────────────────────────
+   PROMPT BUILDERS
+───────────────────────────────────────────── */
+function buildSystemPrompt(f, sc) {
+  const roleCtx = {
+    owner:      'factory owner making investment decisions',
+    manager:    'production manager implementing floor-level changes',
+    auditor:    'auditor evaluating compliance evidence',
+    compliance: 'compliance officer preparing regulatory documentation'
+  }[f.role] || 'factory professional';
+  return `You are a world-class EU Digital Product Passport (DPP) and Lean Manufacturing compliance expert.
+The user is a ${roleCtx}. Pre-calculated scores: Overall=${sc.overall}/100 (${sc.lbl}), Lean Maturity=${sc.lean}%, Data Readiness=${sc.data}%, Compliance Index=${sc.comp}%, EU-market=${sc.eu}.
+Use EXACTLY these section headers (ALL CAPS, followed by colon):
+VERDICT:
+LEAN DPP READINESS:
+EU DPP STATUS:
+KEY GAPS:
+QUICK WINS - NEXT 30 DAYS:
+MEDIUM TERM - 3 TO 6 MONTHS:
+LONG TERM - 6 TO 12 MONTHS:${f.question ? '\nYOUR QUESTION ANSWERED:' : ''}
+Bullet items start with "- ". Plain text only, no markdown symbols. Max 520 words.
+Tailor recommendations to their role, factory type, country, and verification level.
+${sc.data < 35 ? 'Strongly emphasize the need to start formal documentation.' : ''}
+${sc.eu && sc.data < 50 ? 'Flag EU DPP as URGENT — textile DPP rules apply from 2025.' : ''}`;
+}
+
+function buildUserMessage(f) {
+  return `Role: ${f.role}. Factory: ${f.factoryType || 'General'}, ${f.workers || 'size unknown'}, ${f.country || 'location not given'}.
+Products: ${f.products || 'not stated'}. Export markets: ${f.markets.join(', ') || 'none stated'}.
+Lean practices in place (${f.practices.length}/10): ${f.practices.join('; ') || 'none selected'}.
+Documentation level: ${f.docLevel || 'unknown'}. Certifications: ${f.certs.join(', ') || 'none'}.
+Question: ${f.question || 'Provide a full Lean DPP and EU DPP readiness assessment.'}`;
+}
+
+/* ─────────────────────────────────────────────
+   AI CALL (→ Netlify Function)
+───────────────────────────────────────────── */
+async function runAssessment() {
+  u({ phase: 'loading', loadIdx: 0 });
+  _loadTimer = setInterval(() => {
+    S = { ...S, loadIdx: (S.loadIdx + 1) % LOAD_MSGS.length };
+    const el = document.getElementById('load-msg');
+    if (el) el.textContent = LOAD_MSGS[S.loadIdx];
+  }, 2000);
+
+  const f = S.form;
+  const sc = calcScores(f);
+
+  const maxRetries = 2;
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      const resp = await fetch('/.netlify/functions/assess', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          systemPrompt: buildSystemPrompt(f, sc),
+          userMessage:  buildUserMessage(f)
+        })
+      });
+
+      if (resp.status === 429 && attempt < maxRetries) {
+        await new Promise(r => setTimeout(r, 1200 * (attempt + 1)));
+        continue;
+      }
+
+      if (!resp.ok) {
+        const errTxt = await resp.text();
+        throw new Error(`Server returned ${resp.status}: ${errTxt}`);
+      }
+
+      const data = await resp.json();
+      const txt = data.content?.map(b => b.text || '').join('') || 'Unable to generate assessment.';
+      clearInterval(_loadTimer);
+      u({ phase: 'results', result: txt });
+      return;
+    } catch (err) {
+      if (attempt === maxRetries) {
+        clearInterval(_loadTimer);
+        u({ phase: 'error', error: err.message });
+      } else {
+        await new Promise(r => setTimeout(r, 500));
+      }
+    }
+  }
+}
+
+/* ─────────────────────────────────────────────
+   RESULT PARSER
+───────────────────────────────────────────── */
+function parseAI(txt) {
+  const HEADS = ['VERDICT','LEAN DPP','EU DPP STATUS','KEY GAPS','QUICK WINS','MEDIUM TERM','LONG TERM','YOUR QUESTION'];
+  let html = '';
+  txt.split('\n').forEach(line => {
+    const t = line.trim();
+    if (!t) return;
+    if (HEADS.some(h => t.toUpperCase().startsWith(h))) {
+      html += `<div class="ai-sec">${t.replace(':','').trim()}</div>`;
+    } else if (t.startsWith('-')) {
+      html += `<div class="ai-bullet">${t.replace(/^-\s*/,'')}</div>`;
+    } else {
+      html += `<div class="ai-text">${t}</div>`;
+    }
+  });
+  return html;
+}
+
+/* ─────────────────────────────────────────────
+   SCORE RING SVG
+───────────────────────────────────────────── */
+function scoreRing(score, col) {
+  const r = 44, cx = 52, cy = 52, circ = 2 * Math.PI * r;
+  const off = circ - (score / 100) * circ;
+  return `<svg class="score-ring-svg" viewBox="0 0 104 104" aria-label="Score: ${score} out of 100">
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#111827" stroke-width="7.5"/>
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${col}" stroke-width="7.5" stroke-linecap="round"
+      stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"
+      transform="rotate(-90 ${cx} ${cy})" style="transition:stroke-dashoffset 1.3s ease .1s"/>
+    <text x="${cx}" y="${cy+8}" text-anchor="middle" font-size="21" font-weight="800"
+      fill="${col}" font-family="Inter,system-ui,sans-serif">${score}</text>
+  </svg>`;
+}
+
+function verifBadge(dl) {
+  const map = {
+    verified:   ['💎 Third-Party Verified','rgba(129,140,248,.18)','#818CF8'],
+    documented: ['✅ Fully Documented',   'rgba(0,200,150,.18)',  '#00C896'],
+    partial:    ['⚠ Partial Records',    'rgba(245,158,11,.18)', '#F59E0B'],
+    none:       ['❌ Self-Reported Only', 'rgba(239,68,68,.18)',  '#EF4444']
+  };
+  const [label, bg, col] = map[dl] || map.none;
+  return `<span class="verif-badge" style="background:${bg};color:${col}">${label}</span>`;
+}
+
+/* ─────────────────────────────────────────────
+   DOWNLOAD + SHARE
+───────────────────────────────────────────── */
+function downloadReport() {
+  const f = S.form; const sc = calcScores(f);
+  const roleLabel = ROLES.find(r => r.id === f.role)?.t || f.role;
+  const content = [
+    'FACTORY DPP READINESS REPORT',
+    '═'.repeat(44),
+    `Role:         ${roleLabel}`,
+    `Factory Type: ${f.factoryType}`,
+    `Size:         ${f.workers}`,
+    `Location:     ${f.country || 'Not specified'}`,
+    `Products:     ${f.products || 'Not specified'}`,
+    `Markets:      ${f.markets.join(', ') || 'None stated'}`,
+    `Lean (${f.practices.length}/10): ${f.practices.join('; ') || 'None'}`,
+    `Documentation: ${DOC_OPTS.find(d=>d.id===f.docLevel)?.t || 'Not stated'}`,
+    `Certifications: ${f.certs.join(', ') || 'None'}`,
+    '',
+    'SCORES',
+    '─'.repeat(44),
+    `Overall DPP Readiness : ${sc.overall}/100 — ${sc.lbl}`,
+    `Lean Maturity         : ${sc.lean}%`,
+    `Data Readiness        : ${sc.data}%`,
+    `Compliance Index      : ${sc.comp}%`,
+    `EU Market Exposed     : ${sc.eu ? 'Yes — URGENT' : 'No'}`,
+    '',
+    'AI ASSESSMENT',
+    '─'.repeat(44),
+    S.result,
+    '',
+    `Generated: ${new Date().toLocaleDateString()} | Factory DPP Check`
+  ].join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([content], { type: 'text/plain' }));
+  a.download = `DPP-Report-${Date.now()}.txt`;
+  a.click();
+}
+
+function copyScore() {
+  const sc = calcScores(S.form);
+  navigator.clipboard.writeText(`My factory scored ${sc.overall}/100 on DPP Readiness (${sc.lbl}) — assessed at Factory DPP Check`).catch(() => {});
+  const b = document.getElementById('copy-btn');
+  if (b) { b.textContent = '✓ Copied!'; setTimeout(() => b.textContent = 'Copy Score', 2000); }
+}
+
+/* ─────────────────────────────────────────────
+   RENDER ENGINE
+───────────────────────────────────────────── */
+function render() {
+  const root = document.getElementById('app');
+  const { phase, step, form, result, error } = S;
+
+  /* ── HERO ──────────────────────────────────── */
+  if (phase === 'hero') {
+    const ticker = '🇧🇩 Bangladesh &nbsp;·&nbsp; 🇻🇳 Vietnam &nbsp;·&nbsp; 🇨🇳 China &nbsp;·&nbsp; 🇮🇳 India &nbsp;·&nbsp; 🇹🇷 Turkey &nbsp;·&nbsp; 🇲🇦 Morocco &nbsp;·&nbsp; 🇰🇭 Cambodia &nbsp;·&nbsp; 🇵🇰 Pakistan &nbsp;·&nbsp; 🇪🇹 Ethiopia &nbsp;·&nbsp; 🇮🇩 Indonesia &nbsp;·&nbsp; 🇱🇰 Sri Lanka &nbsp;·&nbsp; ';
+    root.innerHTML = `
+<main>
+  <section class="hero" aria-label="Hero">
+    <div class="hero-glow-top" aria-hidden="true"></div>
+    <div class="hero-glow-bot" aria-hidden="true"></div>
+    <div class="badge" style="margin-bottom:1.4rem">🌍 Global · Free · AI-Powered</div>
+    <h1>Is your factory ready for<br><span class="grad-text">EU Digital Product Passport?</span></h1>
+    <p class="hero-sub">Get a free, personalized AI readiness assessment — Lean DPP & EU DPP. Any factory size, anywhere in the world, verified or not.</p>
+    <button class="btn-primary" onclick="u({phase:'form',step:1})" aria-label="Start assessment">
+      Check My Factory Free →
+    </button>
+    <p class="hero-hint">No login · No credit card · Takes 3 minutes</p>
+    <div class="hero-stats">
+      <div><div class="stat-n">Lean DPP</div><div class="stat-l">Readiness Check</div></div>
+      <div><div class="stat-n">EU DPP</div><div class="stat-l">2025 Compliance</div></div>
+      <div><div class="stat-n">Verified</div><div class="stat-l">& Unverified</div></div>
+      <div><div class="stat-n">AI Report</div><div class="stat-l">Personalized</div></div>
+    </div>
+    <div class="ticker-wrap" aria-label="Countries supported">
+      <div class="ticker">${ticker}${ticker}</div>
+    </div>
+  </section>
+
+  <!-- SEO Content Block -->
+  <section class="seo-footer" aria-label="About this tool">
+    <h2>What is the EU Digital Product Passport (DPP)?</h2>
+    <p>The EU Digital Product Passport is a mandatory digital record under the EU Ecodesign for Sustainable Products Regulation (ESPR). Starting from 2025, textile and apparel products exported to the EU must include a DPP containing data on materials, sustainability, repairability, and supply chain traceability.</p>
+    <p>This free tool helps factory owners, production managers, auditors, and compliance officers worldwide assess their lean manufacturing readiness and EU DPP compliance gap — instantly, using AI.</p>
+    <div class="tags">
+      <span class="tag">EU DPP 2025</span><span class="tag">Lean Manufacturing</span>
+      <span class="tag">Garment Compliance</span><span class="tag">Textile Sustainability</span>
+      <span class="tag">ESPR Regulation</span><span class="tag">Factory Readiness</span>
+      <span class="tag">Bangladesh RMG</span><span class="tag">Vietnam Factories</span>
+    </div>
+  </section>
+</main>`;
+    return;
+  }
+
+  /* ── FORM ──────────────────────────────────── */
+  if (phase === 'form') {
+    const pct = (step / 6) * 100;
+    let body = '';
+
+    /* Step 1 – Role */
+    if (step === 1) {
+      const roleCards = ROLES.map(r =>
+        `<button class="role-card${form.role === r.id ? ' sel' : ''}" onclick="uf('role','${r.id}')" aria-pressed="${form.role === r.id}">
+          <div class="role-icon">${r.ic}</div>
+          <div class="role-title">${r.t}</div>
+          <div class="role-desc">${r.d}</div>
+        </button>`
+      ).join('');
+      body = `<h2 class="step-h">What is your role?</h2>
+<p class="step-sub">We'll tailor the assessment and recommendations to your needs.</p>
+<div class="role-cards">${roleCards}</div>`;
+    }
+
+    /* Step 2 – Factory */
+    else if (step === 2) {
+      const fo = FTYPES.map(t => `<option value="${t}"${form.factoryType===t?' selected':''}>${t}</option>`).join('');
+      const so = FSIZES.map(s => `<option value="${s}"${form.workers===s?' selected':''}>${s}</option>`).join('');
+      body = `<h2 class="step-h">Factory basics</h2>
+<p class="step-sub">Tell us what kind of factory you operate.</p>
+<div class="field"><label class="label" for="ft">Factory Type *</label>
+  <select id="ft" class="select" onchange="uf('factoryType',this.value)"><option value="">Select type…</option>${fo}</select></div>
+<div class="field"><label class="label" for="fs">Factory Size *</label>
+  <select id="fs" class="select" onchange="uf('workers',this.value)"><option value="">Select size…</option>${so}</select></div>
+<div class="field"><label class="label" for="fc">Country / Region</label>
+  <input id="fc" class="input" placeholder="e.g. Bangladesh, Vietnam, Turkey, Morocco, Ethiopia…" value="${form.country}" oninput="uf('country',this.value)" autocomplete="country-name"></div>`;
+    }
+
+    /* Step 3 – Products & Markets */
+    else if (step === 3) {
+      const mp = MARKETS.map(m =>
+        `<button class="pill${form.markets.includes(m)?' on':''}" onclick="toggleArr('markets','${m.replace(/'/g,"\\'")}'">${m}</button>`
+      ).join('');
+      body = `<h2 class="step-h">Products & markets</h2>
+<p class="step-sub">What do you make, and where does it go?</p>
+<div class="field"><label class="label" for="fp">Main Products</label>
+  <input id="fp" class="input" placeholder="e.g. T-shirts, denim, woven shirts, knitwear, footwear…" value="${form.products}" oninput="uf('products',this.value)"></div>
+<div class="field"><label class="label">Export Markets — select all that apply</label>
+  <div class="pills" role="group" aria-label="Export markets">${mp}</div></div>`;
+    }
+
+    /* Step 4 – Lean Practices */
+    else if (step === 4) {
+      const sc = Math.round((form.practices.length / 10) * 100);
+      const col = sc >= 70 ? '#00C896' : sc >= 40 ? '#F59E0B' : '#EF4444';
+      const checks = PRACTICES.map((p, i) => {
+        const on = form.practices.includes(p);
+        return `<div class="chi${on?' ck':''}" onclick="togglePractice(${i})" role="checkbox" aria-checked="${on}" tabindex="0" onkeydown="if(event.key===' ')togglePractice(${i})">
+          <div class="chbox">${on?'<svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3L9 1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>':''}</div>
+          <span class="chlbl" style="color:${on?'#D1D5DB':'#6B7280'}">${p}</span>
+        </div>`;
+      }).join('');
+      body = `<div class="lean-header">
+  <div><h2 class="step-h" style="margin-bottom:0">Current lean practices</h2>
+  <p class="step-sub" style="margin-bottom:0">Check everything your factory already does. Score updates live.</p></div>
+  <div style="text-align:right"><div id="lean-score-disp" class="lean-score-num" style="color:${col}">${sc}%</div>
+  <div class="lean-score-lbl">lean score</div></div></div>
+<div class="lean-bar-track" aria-label="Lean score bar">
+  <div id="lean-score-bar" class="lean-bar-fill" style="width:${sc}%;background:${col}"></div></div>
+<div class="checks" role="group" aria-label="Lean practices">${checks}</div>`;
+    }
+
+    /* Step 5 – Documentation */
+    else if (step === 5) {
+      const dc = DOC_OPTS.map(d =>
+        `<div class="dcard${form.docLevel===d.id?' sel':''}" onclick="uf('docLevel','${d.id}')" role="radio" aria-checked="${form.docLevel===d.id}" tabindex="0">
+          <div class="dcard-hd"><span>${d.ic}</span><span class="dcard-title">${d.t}</span></div>
+          <div class="dcard-desc">${d.d}</div>
+        </div>`
+      ).join('');
+      const cp = CERTS.map(c =>
+        `<button class="pill${form.certs.includes(c)?' on':''}" onclick="toggleArr('certs','${c}')">${c}</button>`
+      ).join('');
+      body = `<h2 class="step-h">Documentation & verification</h2>
+<p class="step-sub">Be honest — this is how we give you the most useful recommendations.</p>
+<div class="field"><label class="label">Documentation Level *</label>
+  <div class="doc-cards" role="radiogroup" aria-label="Documentation level">${dc}</div></div>
+<div class="field"><label class="label">Certifications you hold</label>
+  <div class="pills" role="group">${cp}</div></div>`;
+    }
+
+    /* Step 6 – Question + Summary */
+    else if (step === 6) {
+      const f = form;
+      const roleLabel = ROLES.find(r => r.id === f.role)?.t || '';
+      const rows = [
+        roleLabel && `<span style="color:var(--faint)">Role:</span> ${roleLabel}`,
+        f.factoryType && `<span style="color:var(--faint)">Type:</span> ${f.factoryType}`,
+        f.workers && `<span style="color:var(--faint)">Size:</span> ${f.workers}`,
+        f.country && `<span style="color:var(--faint)">Location:</span> ${f.country}`,
+        f.products && `<span style="color:var(--faint)">Products:</span> ${f.products}`,
+        f.markets.length && `<span style="color:var(--faint)">Markets:</span> ${f.markets.join(', ')}`,
+        `<span style="color:var(--faint)">Lean practices:</span> ${f.practices.length}/10 checked`,
+        f.docLevel && `<span style="color:var(--faint)">Docs:</span> ${DOC_OPTS.find(d=>d.id===f.docLevel)?.t || f.docLevel}`,
+        f.certs.length && `<span style="color:var(--faint)">Certs:</span> ${f.certs.join(', ')}`
+      ].filter(Boolean).map(r => `<div>${r}</div>`).join('');
+      body = `<h2 class="step-h">Your question</h2>
+<p class="step-sub">Ask anything specific — or leave blank for a full Lean DPP and EU DPP assessment.</p>
+<div class="field"><label class="label" for="fq">What do you most want to know? (optional)</label>
+  <textarea id="fq" class="textarea" placeholder="e.g. What data must I collect for EU DPP? Am I ready to export to Europe? How do I get GOTS certified? What should I fix first?" oninput="uf('question',this.value)">${form.question}</textarea></div>
+<div class="sum-box" aria-label="Factory summary">
+  <div class="label" style="margin-bottom:.55rem">Your factory at a glance</div>
+  <div style="line-height:1.9">${rows || '<span style="color:var(--faint)">Complete earlier steps for a fully tailored report.</span>'}</div>
+</div>`;
+    }
+
+    const nextBtn = step < 6
+      ? `<button class="btn-primary" onclick="u({step:${step+1}})" ${!canNext()?'disabled':''}>Continue →</button>`
+      : `<button class="btn-primary" onclick="runAssessment()">Generate My Report →</button>`;
+
+    root.innerHTML = `
+<div class="form-page" role="main">
+  <nav class="form-topbar" aria-label="Form progress">
+    <button class="btn-outline" onclick="${step===1?"u({phase:'hero'})":`u({step:${step-1}})`}" aria-label="Go back">← Back</button>
+    <div class="prog-track" role="progressbar" aria-valuenow="${step}" aria-valuemin="1" aria-valuemax="6" aria-label="Step ${step} of 6">
+      <div class="prog-fill" style="width:${pct}%"></div>
+    </div>
+    <span class="step-counter">${step} / 6</span>
+  </nav>
+  ${body}
+  <div class="form-nav">${nextBtn}</div>
+</div>`;
+    return;
+  }
+
+  /* ── LOADING ───────────────────────────────── */
+  if (phase === 'loading') {
+    root.innerHTML = `
+<div class="load-page" role="status" aria-live="polite" aria-label="Generating assessment">
+  <div style="text-align:center">
+    <div class="spin-wrap" aria-hidden="true">
+      <div class="ring1"></div><div class="ring2"></div><div class="ring3"></div>
+    </div>
+    <p class="load-msg" id="load-msg">${LOAD_MSGS[0]}</p>
+    <p class="load-hint">Claude AI is personalizing your report</p>
+  </div>
+</div>`;
+    return;
+  }
+
+  /* ── ERROR ─────────────────────────────────── */
+  if (phase === 'error') {
+    root.innerHTML = `
+<div class="load-page" role="alert">
+  <div style="text-align:center;max-width:400px;padding:2rem">
+    <div style="font-size:2.5rem;margin-bottom:1rem">⚠️</div>
+    <h2 style="margin-bottom:.75rem">Something went wrong</h2>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:1.5rem;line-height:1.6">${error}</p>
+    <button class="btn-primary" onclick="u({phase:'form',step:6})">← Try Again</button>
+  </div>
+</div>`;
+    return;
+  }
+
+  /* ── RESULTS ───────────────────────────────── */
+  if (phase === 'results') {
+    const sc = calcScores(form);
+    const meta = [form.factoryType, form.workers, form.country].filter(Boolean).join(' · ');
+    const lc = sc.lean >= 70 ? '#00C896' : sc.lean >= 40 ? '#F59E0B' : '#EF4444';
+    const dc = sc.data >= 70 ? '#00C896' : sc.data >= 40 ? '#F59E0B' : '#EF4444';
+    const cc = sc.comp >= 70 ? '#00C896' : sc.comp >= 40 ? '#F59E0B' : '#EF4444';
+
+    root.innerHTML = `
+<div class="res-page" role="main">
+  <header class="res-header">
+    <div class="badge" style="margin-bottom:.8rem">✓ Assessment Complete</div>
+    <h1 style="font-size:1.6rem;font-weight:700;margin-top:.6rem">Your DPP Readiness Report</h1>
+    <p class="res-meta">${meta || 'Global Factory Assessment'}</p>
+  </header>
+
+  <div class="score-grid">
+    <div class="score-main" aria-label="Overall score">
+      ${scoreRing(sc.overall, sc.col)}
+      <div class="score-num" style="color:${sc.col}">${sc.overall}</div>
+      <div class="score-lbl">/100 — ${sc.lbl}</div>
+      ${verifBadge(form.docLevel)}
+    </div>
+    <div class="score-cats">
+      <div class="label" style="margin-bottom:.9rem">Score breakdown</div>
+      <div class="cat-row">
+        <div class="cat-label-row"><span>Lean Maturity</span><span style="color:${lc};font-weight:600">${sc.lean}%</span></div>
+        <div class="cat-track"><div class="cat-fill" style="width:${sc.lean}%;background:${lc}"></div></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label-row"><span>Data Readiness</span><span style="color:${dc};font-weight:600">${sc.data}%</span></div>
+        <div class="cat-track"><div class="cat-fill" style="width:${sc.data}%;background:${dc}"></div></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label-row"><span>Compliance Index</span><span style="color:${cc};font-weight:600">${sc.comp}%</span></div>
+        <div class="cat-track"><div class="cat-fill" style="width:${sc.comp}%;background:${cc}"></div></div>
+      </div>
+      ${sc.eu ? `<div class="eu-alert">⚡ EU market detected — textile DPP rules apply from 2025. Act now.</div>` : ''}
+    </div>
+  </div>
+
+  <article class="ai-card" aria-label="AI assessment">
+    ${parseAI(result)}
+  </article>
+
+  <div class="res-actions">
+    <button class="btn-primary" style="font-size:.88rem;padding:.72rem 1.6rem"
+      onclick="u({phase:'hero',step:1,form:{role:'',country:'',factoryType:'',workers:'',products:'',markets:[],practices:[],docLevel:'',certs:[],question:''},result:''})">
+      Assess Another Factory
+    </button>
+    <button class="btn-outline" onclick="downloadReport()">⬇ Download Report</button>
+    <button class="btn-outline" id="copy-btn" onclick="copyScore()">Copy Score</button>
+  </div>
+</div>`;
+    return;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   INIT
+───────────────────────────────────────────── */
+render();
+</script>
+</body>
+</html>

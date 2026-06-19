@@ -1,0 +1,58 @@
+# ─────────────────────────────────────────────────────────────
+# netlify.toml — Factory DPP Readiness Check
+# ─────────────────────────────────────────────────────────────
+
+[build]
+  publish   = "."                  # Root folder is the site
+  functions = "netlify/functions"  # Where serverless functions live
+
+[build.environment]
+  NODE_VERSION = "18"              # Use Node 18 (built-in fetch required)
+
+# ── Dev server (optional local testing: netlify dev) ─────────
+[dev]
+  targetPort   = 3000
+  port         = 8888
+  autoLaunch   = true
+
+# ── Function config ───────────────────────────────────────────
+[functions]
+  node_bundler = "esbuild"         # Faster bundling, smaller size
+
+# ── Security headers on all pages ────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options            = "DENY"
+    X-Content-Type-Options     = "nosniff"
+    X-XSS-Protection           = "1; mode=block"
+    Referrer-Policy            = "strict-origin-when-cross-origin"
+    Permissions-Policy         = "camera=(), microphone=(), geolocation=()"
+
+# ── HTML caching (short TTL — content may update) ────────────
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+# ── Friendly URL for AI function ─────────────────────────────
+[[redirects]]
+  from   = "/api/assess"
+  to     = "/.netlify/functions/assess"
+  status = 200
+
+# ── SPA fallback (if you add client-side routing later) ──────
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# ─────────────────────────────────────────────────────────────
+# ENVIRONMENT VARIABLE GUIDE
+# ─────────────────────────────────────────────────────────────
+# Set these in Netlify → Site Settings → Environment Variables:
+#
+#   ANTHROPIC_API_KEY   =  sk-ant-api03-...  (required)
+#
+# NEVER put your API key in this file or commit it to Git.
+# ─────────────────────────────────────────────────────────────
