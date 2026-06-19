@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lean-dpp-assess.netlify.app/.netlify.app/sitemap.xml
